@@ -54,7 +54,8 @@ function findFunctions(ast) {
 	}
 	walkes(ast, {
 		FunctionDeclaration: handleFunction,
-		FunctionExpression: handleFunction
+		FunctionExpression: handleFunction,
+		ArrowFunctionExpression: handleFunction
 	});
 	return functions;
 }
